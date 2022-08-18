@@ -1,0 +1,46 @@
+package Cajero;
+
+public class Cuenta {
+
+	private int cantidad = 500;
+
+//	public Cuenta(int cantidad)  {
+//		if(cantidad < 0 )
+//			cantidad = 0;
+//		else {
+//			this.cantidad = cantidad;
+//			System.out.println("cantidad " + this.cantidad );
+//		}
+//	}
+		
+	public void Recarga(int cantidad) {
+		
+		if(cantidad < 0)
+//			JOptionPane.showMessageDialog(null, "no es posible hacer el ingreso");
+			System.out.println("no es posible hacer el ingreso");
+		else {
+			System.out.println("el ingreso a sido exitoso");
+			setCantidad(this.cantidad += cantidad);
+//			this.cantidad += cantidad;
+		}
+	}
+		
+	public void Retiro(int cantidad)
+	{
+		if(cantidad < this.cantidad)
+		{
+			setCantidad(this.cantidad -= cantidad);
+			System.out.println("el retiro ha sido exitosa");
+		}else {
+			System.out.println("sin fondos suficientes para realizar el  retiro");
+		}
+	}
+		
+	int getCantidad() {
+		return cantidad;
+	}
+
+	void setCantidad(int cantidad) {
+		this.cantidad = cantidad;
+	}	
+}

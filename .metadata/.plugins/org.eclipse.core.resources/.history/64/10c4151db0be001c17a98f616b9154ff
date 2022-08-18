@@ -1,0 +1,23 @@
+package Cajero;
+
+public class Main {
+
+	public static void main(String[] args) {
+			
+		
+		PanelUno panelUno = new PanelUno();
+		
+		panelUno.MensajeBienvenida();
+		panelUno.Esperar(2);
+		panelUno.MensajeIngreseUsuario();
+		panelUno.BoxUsuario();
+		panelUno.MensajeIngresarClave();
+		panelUno.BoxClave();
+		panelUno.ButtonIngresarUsuario();
+//		panelUno.ButtonSiguientePanel();
+//		panelUno.setEnableRec(panelUno.panel,false);
+//		System.out.println("se ha finalizado");
+		
+		
+	}
+}

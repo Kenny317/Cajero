@@ -1,0 +1,83 @@
+package Cajero;
+
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.TextArea;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
+import java.awt.Label;
+import java.awt.TextField;
+import javax.swing.Box;
+import javax.swing.JButton;
+import java.awt.Panel;
+import java.awt.BorderLayout;
+import java.awt.Button;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Rectangle;
+import java.awt.event.*;
+import java.util.Scanner;
+import java.awt.event.ActionEvent;
+import javax.swing.JTextPane;
+import javax.swing.UIManager;
+
+
+public class PanelCajero extends JFrame{
+	
+	protected JPanel panel = new JPanel();
+	protected JPanel panel2 = new JPanel();
+	
+	protected Menu menu = new Menu();
+	
+	private Scanner sc = new Scanner(System.in);
+	
+	public PanelCajero() {
+		setTitle("Cajero");
+		
+		setResizable(false);
+		
+		Dimension pantalla = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+		
+		setSize(pantalla.width/3,pantalla.height/2); // width = 1440 / 3 = 480    height = 900 / 2 = 450
+ 		setLocationRelativeTo(null);
+		setVisible(true);
+		
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		panel2.setBackground(Color.blue);
+		panel2.setLayout(null);
+		getContentPane().add(panel2,BorderLayout.CENTER);
+
+		panel.setBackground(Color.LIGHT_GRAY);
+		panel.setLayout(null);
+		getContentPane().add(panel, BorderLayout.CENTER);
+		
+	}
+	
+	public void CambioPanel( JPanel panel) {
+		
+	}
+	
+	public void SetVisible(JPanel panel, boolean enable)
+	{
+//		Esperar(2);
+		panel.setVisible(enable);
+		pack();
+//		System.out.println("panel visible: " + panel.setv);
+//		System.out.println("panel visible: " + panel2.getVisibleRect());
+		
+	}
+	
+	public void Esperar(int segundos) {
+		try {
+			Thread.sleep(segundos*1000);
+		}catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+}
