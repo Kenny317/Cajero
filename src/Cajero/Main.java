@@ -4,9 +4,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import Controlador.CtrlRegistro;
+import Modelo.Consultas;
+import Modelo.Cuenta;
+import Vista.FormCajero;
+
 public class Main {
 
 	public static void main(String[] args) {
+		
+		Cuenta cuen = new Cuenta();
+		Consultas consul = new Consultas();
+		FormCajero formC = new FormCajero();
+		
+		CtrlRegistro ctrlR = new CtrlRegistro(cuen, consul, formC);
+		ctrlR.Iniciar();
+		formC.setVisible(true);
 		
 		//Menu menu = new Menu();
 		

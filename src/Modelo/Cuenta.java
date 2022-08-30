@@ -9,12 +9,18 @@ public class Cuenta extends Conexion{
 	private String nombre;
 	private String apellido;
 	private int id;
-	private int telefono;
+	private String telefono;
 	private String correo;
 	private String fechaNaci;
+	private String contraseñaRegis;
 	private String contraseña;
 	
-	
+	public String getContraseña() {
+		return contraseña;
+	}
+	public void setContraseña(String contraseña) {
+		this.contraseña = contraseña;
+	}
 	public int getCantidad() {
 		return cantidad;
 	}
@@ -40,10 +46,10 @@ public class Cuenta extends Conexion{
 	public void setId(int id) {
 		this.id = id;
 	}
-	public int getTelefono() {
+	public String getTelefono() {
 		return telefono;
 	}
-	public void setTelefono(int telefono) {
+	public void setTelefono(String telefono) {
 		this.telefono = telefono;
 	}
 	public String getCorreo() {
@@ -58,11 +64,11 @@ public class Cuenta extends Conexion{
 	public void setFechaNaci(String fechaNaci) {
 		this.fechaNaci = fechaNaci;
 	}
-	public String getContraseña() {
-		return contraseña;
+	public String getcontraseñaRegis() {
+		return contraseñaRegis;
 	}
-	public void setContraseña(String contraseña) {
-		this.contraseña = contraseña;
+	public void setcontraseñaRegis(String contraseñaRegis) {
+		this.contraseñaRegis = contraseñaRegis;
 	}
 
 
